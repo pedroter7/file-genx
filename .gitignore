@@ -3,3 +3,5 @@ __pycache__/
 
 # Swap/recovery files
 *.swp
+*.glade~
+
