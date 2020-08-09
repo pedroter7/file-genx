@@ -1,1 +1,6 @@
-
+{
+    "Strings": {
+        "mainWindow":["set_title","File Genx"],
+        "nFilesLabel":["set_text","How many files?"]
+    }
+}
