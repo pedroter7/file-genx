@@ -1,6 +1,18 @@
 {
     "Strings": {
-        "mainWindow":["set_title","File Genx"],
-        "nFilesLabel":["set_text","How many files?"]
+        "mainWindow":["set_title",[["File Genx"]]],
+        "nFilesLabel":["set_text",[["Files to generate:"]]],
+        "contentLabel":["set_text",[["Content (each file):"]]],
+        "nContentComboBox":["append",[
+            ["par","paragraph(s)"],
+            ["char","character(s)"],
+            ["line","line(s)"]]],
+        "contentTypeLabel":["set_text",[["Content type:"]]],
+        "contentTypeComboBoxText":["append",[
+            ["rand","Random characters"],
+            ["web-lipsum","Lorem Ipsum text"],
+            ["web-wiki","Random from Wikipedia"]]],
+        "destinationLabel":["set_text",[["Destination:"]]],
+        "generateButton":["set_label",[["Generate!"]]]
     }
 }
