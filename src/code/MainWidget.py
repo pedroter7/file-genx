@@ -34,14 +34,15 @@ class MainWidget:
         # Bind strings
         '''
         self.__res.Strings template:
-            { “object-name”: [ “method-name”, “string-value” ] }
+            { “object-name”: [ “method-to-call-name”, “string-value” ] }
         '''
         for obj in self.__builder.get_objects():
             try:
                 objName = obj.get_name() # Using widget name and not ID!!!!!!!
                 if objName in self.__res.Strings.keys():
                     toCall = getattr(obj, self.__res.Strings[objName][0])
-                    toCall(self.__res.Strings[objName][1])
+                    for callParameters in self.__res.Strings[objName][1]:
+                        toCall(*callParameters) # Using splat operator
             except AttributeError: # obj has no get_name() method
                 pass
 

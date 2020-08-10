@@ -49,5 +49,9 @@ class Handler:
         Gtk.main_quit()
         logging.info("onDestroy.")
 
+    # TODO
+    def onGenerateClick(self, *args):
+        logging.info("onGenerateClick.")
+
         
 
