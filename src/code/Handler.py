@@ -21,6 +21,7 @@ class Handler:
 
     def __init__(self, builder):
         
+        # Find who is calling
         currFrame = currentframe()
         callFrame = getouterframes(currFrame, 2)
         callerName = callFrame[1][3]
@@ -52,6 +53,8 @@ class Handler:
     # TODO
     def onGenerateClick(self, *args):
         logging.info("onGenerateClick.")
+        inputs = self.__builder.getInputs()
+        print(inputs)
 
         
 

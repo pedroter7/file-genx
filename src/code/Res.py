@@ -19,6 +19,7 @@ class Res:
 
     def __init__(self):
 
+        # Find who is calling
         currFrame = currentframe()
         callFrame = getouterframes(currFrame, 2)
         callerName = callFrame[1][3]
