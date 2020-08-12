@@ -4,21 +4,34 @@ Generator class
 
 import logging
 import ContentGenerator
+import File
+import time
 
 class Generator:
     def __init__(self, inputs):
 
         self.__options = self.__translateInputs(inputs)
-        print(self.__options["type"])
         self.__contentGenerator = ContentGenerator.ContentGenerator.factory(self.__options["type"])
         self.__configureContentGenerator()
 
         logging.info("Generator created.")
         
-
-    # TODO
+    # TODO: return error so that Handler can display dialog
     def generate(self):
-        pass
+        
+        PREFIX = "file"
+
+        try:        
+            file = File.File(self.__options["destPath"])
+            for i in range(int(self.__options['nFiles'])):
+                if self.__options["mode"].startswith("web"): time.sleep(0.25) # Try to prevent block by API
+                content = self.__contentGenerator.generate()
+                file.write(PREFIX, content)
+            logging.info("All {} files written.".format(self.__options['nFiles']))
+        except FileNotFoundError:
+            logging.error("FileNotFoundError on Generator.generate().")
+        except PermissionError:
+            logging.error("PermissionError on Generator.generate().")
 
     def __translateInputs(self, inputs):
         TRANSLATION_TABLE = {
@@ -42,14 +55,15 @@ class Generator:
 ###########################################
 '''         TEST LINES      IGNORE      '''
 ###########################################
-logging.basicConfig(format="[%(levelname)s]: %(message)s", level=logging.DEBUG)
+# logging.basicConfig(format="[%(levelname)s]: %(message)s", level=logging.DEBUG)
 
-inputs = {
-    "nFilesSpinButton":"15",
-    "nContentSpinButton":"30",
-    "nContentComboBox":"line",
-    "contentTypeComboBoxText":"rand",
-    "destinationChooser":"/home/pedro/Documents/"
-}
+# inputs = {
+#     "nFilesSpinButton":"1",
+#     "nContentSpinButton":"20",
+#     "nContentComboBox":"line",
+#     "contentTypeComboBoxText":"web-lipsum",
+#     "destinationChooser":"/home/pedro/Documents/"
+# }
 
-gen = Generator(inputs)
+# gen = Generator(inputs)
+# gen.generate()

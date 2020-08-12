@@ -15,6 +15,8 @@ from gi.repository import Gtk
 import logging
 from inspect import currentframe, getouterframes
 
+import Generator
+
 class Handler:
 
     __uniqueInstace = None
@@ -50,11 +52,9 @@ class Handler:
         Gtk.main_quit()
         logging.info("onDestroy.")
 
-    # TODO
+    # TODO: freeze buttons and display dialog window
     def onGenerateClick(self, *args):
         logging.info("onGenerateClick.")
         inputs = self.__builder.getInputs()
-        print(inputs)
-
-        
-
+        generator = Generator.Generator(inputs)
+        generator.generate()

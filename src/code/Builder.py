@@ -35,7 +35,7 @@ class Builder(Gtk.Builder):
 
             # Find method and get value
             if obj.__class__ == Gtk.SpinButton:
-                value = str(obj.get_value())
+                value = str(int(obj.get_value()))
             elif obj.__class__ == Gtk.ComboBoxText:
                 value = str(obj.get_active_id())
             elif obj.__class__ == Gtk.FileChooserButton:

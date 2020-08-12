@@ -15,7 +15,7 @@ from inspect import currentframe, getouterframes
 class Res:
 
     __uniqueInstace = None
-    __PATH = "resources/resources.json"
+    __PATH = "resources/resources.json" # TODO: fix
 
     def __init__(self):
 

@@ -14,7 +14,7 @@ import logging
 
 class MainWidget:
 
-    __GLADEPATH = "layout/AppLayout.glade"
+    __GLADEPATH = "layout/AppLayout.glade" # TODO: fix
 
     def __init__(self):
 
