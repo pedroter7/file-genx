@@ -12,6 +12,12 @@ class File:
         
         self.__path = path
 
-    # TODO
     def write(self, prefix, content):
-        pass
+
+        fileName = "{}/{}-{}".format(self.__path, prefix, File.__suffix)
+        logging.info("Writting to {}.".format(fileName))        
+        outFile = open(fileName, 'w')
+        outFile.write(content)
+        outFile.close()
+        logging.info("File {} wrote.".format(prefix+str(File.__suffix)))
+        File.__suffix += 1
