@@ -10,8 +10,7 @@
         "contentTypeLabel":["set_text",[["Content type:"]]],
         "contentTypeComboBoxText":["append",[
             ["rand","Random characters"],
-            ["web-lipsum","Lorem Ipsum text"],
-            ["web-wiki","Random from Wikipedia"]]],
+            ["web-lipsum","Lorem Ipsum text"]]],
         "destinationLabel":["set_text",[["Destination:"]]],
         "generateButton":["set_label",[["Generate!"]]]
     }
