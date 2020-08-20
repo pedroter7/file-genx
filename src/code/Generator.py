@@ -16,7 +16,6 @@ class Generator:
 
         logging.info("Generator created.")
         
-    # TODO: return error so that Handler can display dialog
     def generate(self):
         
         PREFIX = "file"

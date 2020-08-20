@@ -59,9 +59,9 @@ class MainWidget:
     
     def launch(self):
 
-        window = self.__builder.get_object("mainWindow")
+        window = self.__builder.get_object("mainWindow")        
         window.show_all()
-
+        
         Gtk.main()
 
     def getBuilder(self):

@@ -8,9 +8,13 @@ This script is the starting point of the application. Call this from src directo
 
 import MainWidget
 import logging
+import pathlib
+
+# Define log file path
+logPath = str(pathlib.Path(__file__).parent.absolute()) + "/file-genx-log.txt"
 
 # Logging configuration
-logging.basicConfig(format="[%(levelname)s]: %(message)s", level=logging.DEBUG)
+logging.basicConfig(format="[%(levelname)s]: %(message)s", level=logging.DEBUG, filename=logPath)
 
 mainInstance = MainWidget.MainWidget()
 mainInstance.launch()

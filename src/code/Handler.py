@@ -52,7 +52,6 @@ class Handler:
         Gtk.main_quit()
         logging.info("onDestroy.")
 
-    # TODO: freeze buttons and display dialog window
     def onGenerateClick(self, *args):
         logging.info("onGenerateClick.")
         inputs = self.__builder.getInputs()
