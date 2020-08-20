@@ -11,10 +11,15 @@ import Handler
 import Res
 
 import logging
+import pathlib
 
 class MainWidget:
 
-    __GLADEPATH = "layout/AppLayout.glade" # TODO: fix
+    '''
+    Get script folder then get that folder's folder and append layout/AppLayout.glade
+    Now the script can be called from anywhere.
+    '''
+    __GLADEPATH = str(pathlib.Path(pathlib.Path(__file__).parent.absolute()).parent.absolute()) + "/layout/AppLayout.glade"
 
     def __init__(self):
 

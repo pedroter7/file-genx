@@ -11,11 +11,17 @@ Notice:
 import logging
 import json
 from inspect import currentframe, getouterframes
+import pathlib
 
 class Res:
 
     __uniqueInstace = None
-    __PATH = "resources/resources.json" # TODO: fix
+
+    '''
+    Get script folder then get that folder's folder and append resources/resources.json
+    Now the script can be called from anywhere.
+    '''
+    __PATH = str(pathlib.Path(pathlib.Path(__file__).parent.absolute()).parent.absolute()) + "/resources/resources.json"
 
     def __init__(self):
 
