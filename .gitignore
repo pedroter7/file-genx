@@ -11,3 +11,5 @@ file-genx-log.txt
 
 # Other stuff
 *.out
+build/
+dist/
