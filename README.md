@@ -1,22 +1,15 @@
 # File Genx - Random Files Generator
 
-File Genx is a simple program written in Python3 whose job is to generate random files.
+File Genx is a simple program written in Python3 whose job is to generate files with some kinda random content.
 
 ## Requirements
 
-Since the program is not compiled (yet), you must have those installed in your system to run File Genx:
+To run with python, you must have those installed in your system to run File Genx:
 
 - Python 3.5 or newer
 - PyGobject
 
 ## How to run
 
-- Download the [zip file](https://github.com/pedroter7/file-genx/blob/master/file-genx-1.0.zip?raw=true) containing the latest version and unzip it.
-- Go to file-genx-\* folder (where \* is the version number you've downloaded)
-- Run File-Genx.sh if you're on Linux or run code/File-Genx.py using python3
-
-## Releases
-
-**1.0 (latest)**: File Genx is ready to use. You can generate files containing:
-- Random alphanumeric characters;
-- Lorem Ipsum text (*Requires internet connection*). 
+- Run src/code/File-Genx.py using python3 or src/code/File-Genx-CLI.py for the CLI version;
+- Alternatively, download and run a binary from the GitHub versions;
