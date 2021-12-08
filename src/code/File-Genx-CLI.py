@@ -6,7 +6,7 @@ GitHub: https://github.com/pedroter7/file-genx
 This is a CLI version of File Genx. This script works by simply 'emulating' the GUI input.
 '''
 
-import argparse
+from argparse import ArgumentParser
 
 from Generator import Generator
 
@@ -22,7 +22,7 @@ VALID_CONTENT_TYPE_STRINGS = [
 ]
 
 def createArgParser():
-    argParser = argparse.ArgumentParser(
+    argParser = ArgumentParser(
         description='File-Genx CLI version. Visit https://github.com/pedroter7/file-genx for more info.'
     )
 
